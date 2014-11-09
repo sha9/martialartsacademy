@@ -1,0 +1,110 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Martial Arts Academy | Home</title>
+    <link href="~/Content/gympack/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/Content/gympack/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,3); } </script>
+    <!--<link href="web/css/style.css" rel="stylesheet" type="text/css" media="all" />-->
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/gympack/jquery.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+            });
+        });
+    </script>
+    <!-- grid-slider -->
+    <script type="text/javascript" src="~/Scripts/gympack/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="~/Scripts/gympack/jquery.contentcarousel.js"></script>
+    <script type="text/javascript" src="~/Scripts/gympack/jquery.easing.1.3.js"></script>
+    <!-- //grid-slider -->
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header-text">
+                <h1>Siden er under ombygning</h1>
+                <h1>Martial Arts Academy</h1>
+                <h2>Bedste valg for fysisk og psykisk træning</h2>
+                <p>her er der en paragraf der skal udfyldes og skal tages videre til About siden</p>
+                <div class="banner_btn">
+                    <a href="#">Læs Mere</a>
+                </div>
+            </div>
+            <div class="header-arrow">
+                <a href="#menu" class="class scroll"><span> </span></a>
+            </div>
+        </div>
+    </div>
+    @Html.Partial("_HeaderBottom")
+    <!-- start menu -->
+    <div class="menu" id="menu">
+        <div class="container">
+            <div class="logo">
+                <a href="@Url.Action("Index")"><img src="~/Images/gympack/logo.png" alt="" /></a>
+            </div>
+            <div class="h_menu4">
+                <!-- start h_menu4 -->
+                <a class="toggleMenu" href="#">Menu</a>
+                <ul class="nav">
+                    <li class="active"><a href="@Url.Action("Index")">Hjem</a></li>
+                    <li><a href="@Url.Action("About")">Om MAA</a></li>
+                    <li><a href="@Url.Action("Contact")">Kontakt</a></li>
+                    <li>
+                        <a href="@Url.Action("Timetable")">Tider</a>
+                    </li>
+                    <li><a href="@Url.Action("Prices")">Priser</a></li>
+                    <li><a href="https://www.facebook.com/pages/Martial-Arts-Academy/910899232258330?fref=ts" target="_blank">Blog</a></li>
+                 </ul>
+                <script type="text/javascript" src="~/Scripts/gympack/nav.js"></script>
+            </div><!-- end h_menu4 -->
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!-- end menu -->
+    <div class="main">
+        <div class="container">
+            @Html.Partial("_ContentTop")
+        </div>
+        <div class="container">
+            @Html.Partial("_ContentMiddle")
+           
+           @*@Html.Partial("_ContentMiddleBottom")*@
+            <div class="row about">
+                <div class="col-md-8">
+                   @Html.Partial("_Gallery")
+                </div>
+                <div class="col-md-4">
+                    @Html.Partial("_Partner")
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="map">
+       @Html.Partial("_Map")
+        @Html.Partial("_OpeningHours")
+    </div>
+    @*<div class="footer-top">
+        @Html.Partial("_FooterTop")
+    </div>*@
+    <div class="footer-bottom">
+        @Html.Partial("_FooterBottom")
+    </div>
+    <div class="copyright">
+       @Html.Partial("_Copyright")
+    </div>
+</body>
+</html>

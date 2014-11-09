@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_LayoutAcademy.cshtml";
+}
+   <!-- start menu -->
+<div class="menu" id="menu">
+    <div class="container">
+        <div class="logo">
+            <a href="@Url.Action("Index")"><img src="~/Images/gympack/logo.png" alt="" /></a>
+        </div>
+        <div class="h_menu4">
+            <!-- start h_menu4 -->
+            <a class="toggleMenu" href="#">Menu</a>
+            <ul class="nav">
+                <li><a href="@Url.Action("Index")">Hjem</a></li>
+                <li><a href="@Url.Action("About")">Om MAA</a></li>
+                <li class="active"><a href="@Url.Action("Contact")">Kontakt</a></li>
+                <li>
+                    <a href="@Url.Action("Timetable")">Tider</a>
+                </li>
+                <li><a href="@Url.Action("Prices")">Priser</a></li>
+                <li><a href="https://www.facebook.com/pages/Martial-Arts-Academy/910899232258330?fref=ts" target="_blank">Blog</a></li>
+            </ul>
+            <script type="text/javascript" src="~/Scripts/gympack/nav.js"></script>
+        </div><!-- end h_menu4 -->
+        <div class="clear"></div>
+    </div>
+</div>
+<!-- end menu -->
+<div class="main">
+   @Html.Partial("_Map")
+    <div class="about_banner_wrap">
+        <h1 class="m_11">Contact</h1>
+    </div>
+    <div class="border"> </div>
+<div class="rwo contact">
+    <div class="container">
+        <div class="col-md-8 contact-top">
+            <h3>Send us a message</h3>
+            <p class="contact_msg">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</p>
+            <form method="post" action="contact-post.html">
+                <div class="to">
+                    <input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+                    <input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left:20px">
+                    <input type="text" class="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" style="margin-left:20px">
+                </div>
+                <div class="text">
+                    <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message:</textarea>
+                </div>
+                <div class="form-submit1">
+                    <input name="submit" type="submit" id="submit" value="Submit Your Message"><br>
+                    <p class="m_msg">Make sure you put a valid email</p>
+                </div>
+                <div class="clear"></div>
+            </form>
+        </div>
+        <div class="col-md-4 contact-top_right">
+            <h3>contact info</h3>
+            <p>diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
+            <ul class="contact_info">
+                <li><i class="mobile"> </i><span>28 88 09 00</span></li>
+                <li><i class="message"> </i><span class="msg">sifuabdul@gmail.com</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    </div>
+@section Scripts{
+    <script type="text/javascript" src="~/Scripts/gympack/jquery.contentcarousel.js"></script>
+}
